@@ -79,6 +79,8 @@
 
             .password-toggle-icon i {font-size: 18px;line-height: 1;color: #737b9054;transition: color 0.3s ease-in-out;margin-bottom: 20px;margin-left: -2em; cursor: pointer;}
             .password-toggle-icon i:hover { color: #737b9099;}
+            .form-submit-container .error-message{text-align: center; color: var(--color-error-red); visibility: hidden; height:0.8em; font-size: 0.8em; display: block;}
+            .form-submit-container.error .error-message{ visibility: visible;}
             @media screen and (max-width: 768px){
                 #user-form{padding:6vh 6vw;}
             }
@@ -104,7 +106,9 @@
                             <input type="password" name="user_confirm_password" id="user-confirm-password" class="password-field" required />
                         </div>
                         <br/>
-                        <div class='form-submit-container'>
+                        <!--remove error class to hide error message-->
+                        <div class='form-submit-container error'>
+                            <p class="error-message">ERROR MESSAGE</p>
                             <input class="user-button" type="submit" value="Reset Password" />
                         </div>
                         
